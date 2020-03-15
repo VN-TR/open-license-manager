@@ -1,0 +1,982 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Documentation &mdash; licensecc 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Backoffice (Draft) (Use Cases)" href="../analysis/Backoffice.html" />
+    <link rel="prev" title="Issue licenses" href="../usage/issue-licenses.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> licensecc
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Build the library:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../development/Build-the-library.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development/Build-the-library-windows.html">Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development/Dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development/Development-Environment-Setup.html">Developer’s environment setup</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Integrate and use:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../usage/Hardware-identifiers.html">Hardware Identifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/License-retrieval.html">Place the license file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/integration.html">Integrate license in your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/issue-licenses.html">Issue licenses</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Analysis:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../analysis/Backoffice.html">Backoffice (Draft) (Use Cases)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis/Development-And-Usage-Workflow.html">Development and usage workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis/features.html">Features:</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Miscellaneous:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../other/CREDITS.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other/QA.html">Q&amp;A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other/glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">licensecc</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/public_api.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="documentation">
+<h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
+<dl class="type">
+<dt id="_CPPv47license">
+<span id="_CPPv37license"></span><span id="_CPPv27license"></span><span id="license"></span><span class="target" id="namespacelicense"></span><em class="property">namespace </em><code class="sig-name descname">license</code><a class="headerlink" href="#_CPPv47license" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Enums</p>
+<dl class="enum">
+<dt id="_CPPv4N7license11FILE_FORMATE">
+<span id="_CPPv3N7license11FILE_FORMATE"></span><span id="_CPPv2N7license11FILE_FORMATE"></span><span class="target" id="StringUtils_8h_1ab74ae0c9bc7e2c475d0028c379028f0e"></span><em class="property">enum </em><code class="sig-name descname">FILE_FORMAT</code><a class="headerlink" href="#_CPPv4N7license11FILE_FORMATE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv4N7license3INIE">
+<span id="_CPPv3N7license3INIE"></span><span id="_CPPv2N7license3INIE"></span><span class="target" id="StringUtils_8h_1ab74ae0c9bc7e2c475d0028c379028f0ea5c739525b87e03c5a7764d5a7dbf90f2"></span><code class="sig-name descname">INI</code><a class="headerlink" href="#_CPPv4N7license3INIE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N7license6BASE64E">
+<span id="_CPPv3N7license6BASE64E"></span><span id="_CPPv2N7license6BASE64E"></span><span class="target" id="StringUtils_8h_1ab74ae0c9bc7e2c475d0028c379028f0ea88a2a71d80dd82600d50c2157d75f25c"></span><code class="sig-name descname">BASE64</code><a class="headerlink" href="#_CPPv4N7license6BASE64E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N7license7UNKNOWNE">
+<span id="_CPPv3N7license7UNKNOWNE"></span><span id="_CPPv2N7license7UNKNOWNE"></span><span class="target" id="StringUtils_8h_1ab74ae0c9bc7e2c475d0028c379028f0ea3e8afe3a77fd0cc59e0666e26f62e3d7"></span><code class="sig-name descname">UNKNOWN</code><a class="headerlink" href="#_CPPv4N7license7UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv4N7license16add_CR_if_neededER6stringi">
+<span id="_CPPv3N7license16add_CR_if_neededER6stringi"></span><span id="_CPPv2N7license16add_CR_if_neededER6stringi"></span><span id="license::add_CR_if_needed__stringR.i"></span><span class="target" id="base64_8cpp_1a843f0f13564d677400f2eb8390250cb3"></span>void <code class="sig-name descname">add_CR_if_needed</code><span class="sig-paren">(</span>string &amp;<em>encodeBuffer</em>, int <em>lineLenght</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license16add_CR_if_neededER6stringi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license6base64EPKv6size_ti">
+<span id="_CPPv3N7license6base64EPKv6size_ti"></span><span id="_CPPv2N7license6base64EPKv6size_ti"></span><span id="license::base64__voidCP.s.i"></span><span class="target" id="base64_8cpp_1a5dffb455f60075f976523344b3db04c0"></span>std::string <code class="sig-name descname">base64</code><span class="sig-paren">(</span><em class="property">const</em> void *<em>binaryData</em>, size_t <em>len</em>, int <em>lineLenght</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license6base64EPKv6size_ti" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license8unbase64ERKNSt6stringE">
+<span id="_CPPv3N7license8unbase64ERKNSt6stringE"></span><span id="_CPPv2N7license8unbase64ERKNSt6stringE"></span><span id="license::unbase64__ssCR"></span><span class="target" id="base64_8cpp_1a8f12122d89b0616285d56b3b9be0fe22"></span>std::vector&lt;uint8_t&gt; <code class="sig-name descname">unbase64</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>base64_data</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license8unbase64ERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7licenselsER13EventRegistryR10AuditEvent">
+<span id="_CPPv3N7licenselsER13EventRegistryR10AuditEvent"></span><span id="_CPPv2N7licenselsER13EventRegistryR10AuditEvent"></span><span id="license::lshift-operator__EventRegistryR.AuditEventR"></span><span class="target" id="EventRegistry_8cpp_1a51bd55a488a8c57fb92cb144e2da0747"></span><a class="reference internal" href="#_CPPv4N7license13EventRegistryE" title="license::EventRegistry">EventRegistry</a> &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N7license13EventRegistryE" title="license::EventRegistry">EventRegistry</a> &amp;<em>eventRegistry</em>, AuditEvent &amp;<em>securityEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7licenselsER13EventRegistryR10AuditEvent" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7licenselsER13EventRegistryR13EventRegistry">
+<span id="_CPPv3N7licenselsER13EventRegistryR13EventRegistry"></span><span id="_CPPv2N7licenselsER13EventRegistryR13EventRegistry"></span><span id="license::lshift-operator__EventRegistryR.EventRegistryR"></span><span class="target" id="EventRegistry_8cpp_1ab161250f0d510bbd131f969c20082b72"></span><a class="reference internal" href="#_CPPv4N7license13EventRegistryE" title="license::EventRegistry">EventRegistry</a> &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N7license13EventRegistryE" title="license::EventRegistry">EventRegistry</a> &amp;<em>eventRegistry1</em>, <a class="reference internal" href="#_CPPv4N7license13EventRegistryE" title="license::EventRegistry">EventRegistry</a> &amp;<em>otherRegistry</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7licenselsER13EventRegistryR13EventRegistry" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7licenselsERNSt7ostreamERK13EventRegistry">
+<span id="_CPPv3N7licenselsERNSt7ostreamERK13EventRegistry"></span><span id="_CPPv2N7licenselsERNSt7ostreamERK13EventRegistry"></span><span id="license::lshift-operator__osR.EventRegistryCR"></span><span class="target" id="EventRegistry_8cpp_1aa2f93812b0929216aee2ff39ab721d0f"></span>ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream &amp;<em>out</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N7license13EventRegistryE" title="license::EventRegistry">EventRegistry</a> &amp;<em>er</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7licenselsERNSt7ostreamERK13EventRegistry" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license21filter_existing_filesERK6vectorI6stringER13EventRegistryPKc">
+<span id="_CPPv3N7license21filter_existing_filesERK6vectorI6stringER13EventRegistryPKc"></span><span id="_CPPv2N7license21filter_existing_filesERK6vectorI6stringER13EventRegistryPKc"></span><span id="license::filter_existing_files__vector:string:CR.EventRegistryR.cCP"></span><span class="target" id="file__utils_8cpp_1a7792b11cab021e000088d99dcd465aac"></span>vector&lt;string&gt; <code class="sig-name descname">filter_existing_files</code><span class="sig-paren">(</span><em class="property">const</em> vector&lt;string&gt; &amp;<em>fileList</em>, <a class="reference internal" href="#_CPPv4N7license13EventRegistryE" title="license::EventRegistry">EventRegistry</a> &amp;<em>registry</em>, <em class="property">const</em> char *<em>extraData</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license21filter_existing_filesERK6vectorI6stringER13EventRegistryPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license17get_file_contentsEPKc6size_t">
+<span id="_CPPv3N7license17get_file_contentsEPKc6size_t"></span><span id="_CPPv2N7license17get_file_contentsEPKc6size_t"></span><span id="license::get_file_contents__cCP.s"></span><span class="target" id="file__utils_8cpp_1a160a9f78ed7ed54e3a9ca577e991d199"></span>std::string <code class="sig-name descname">get_file_contents</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>filename</em>, size_t <em>max_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license17get_file_contentsEPKc6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license16remove_extensionERK6string">
+<span id="_CPPv3N7license16remove_extensionERK6string"></span><span id="_CPPv2N7license16remove_extensionERK6string"></span><span id="license::remove_extension__stringCR"></span><span class="target" id="file__utils_8cpp_1ad4055c156fc3752899f273427037aca8"></span>string <code class="sig-name descname">remove_extension</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license16remove_extensionERK6string" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license21filter_existing_filesERKNSt6vectorINSt6stringEEER13EventRegistryPKc">
+<span id="_CPPv3N7license21filter_existing_filesERKNSt6vectorINSt6stringEEER13EventRegistryPKc"></span><span id="_CPPv2N7license21filter_existing_filesERKNSt6vectorINSt6stringEEER13EventRegistryPKc"></span><span id="license::filter_existing_files__std::vector:ss:CR.EventRegistryR.cCP"></span><span class="target" id="file__utils_8hpp_1a6743b4fcb284933ee6a974f840e906c7"></span>std::vector&lt;std::string&gt; <code class="sig-name descname">filter_existing_files</code><span class="sig-paren">(</span><em class="property">const</em> std::vector&lt;std::string&gt; &amp;<em>fileList</em>, <a class="reference internal" href="#_CPPv4N7license13EventRegistryE" title="license::EventRegistry">EventRegistry</a> &amp;<em>registry</em>, <em class="property">const</em> char *<em>extraData</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license21filter_existing_filesERKNSt6vectorINSt6stringEEER13EventRegistryPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license16remove_extensionERKNSt6stringE">
+<span id="_CPPv3N7license16remove_extensionERKNSt6stringE"></span><span id="_CPPv2N7license16remove_extensionERKNSt6stringE"></span><span id="license::remove_extension__ssCR"></span><span class="target" id="file__utils_8hpp_1ab46c45af358f9b591dcdc4701b667f32"></span>std::string <code class="sig-name descname">remove_extension</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license16remove_extensionERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license9trim_copyERK6string">
+<span id="_CPPv3N7license9trim_copyERK6string"></span><span id="_CPPv2N7license9trim_copyERK6string"></span><span id="license::trim_copy__stringCR"></span><span class="target" id="StringUtils_8cpp_1ae11fb9a7943d5856519d7428e8a2135a"></span>string <code class="sig-name descname">trim_copy</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>string_to_trim</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license9trim_copyERK6string" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license12toupper_copyERK6string">
+<span id="_CPPv3N7license12toupper_copyERK6string"></span><span id="_CPPv2N7license12toupper_copyERK6string"></span><span id="license::toupper_copy__stringCR"></span><span class="target" id="StringUtils_8cpp_1a00ab6dee617b2915ca1092fb9754ad0c"></span>string <code class="sig-name descname">toupper_copy</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>lowercase</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license12toupper_copyERK6string" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license18seconds_from_epochERK6string">
+<span id="_CPPv3N7license18seconds_from_epochERK6string"></span><span id="_CPPv2N7license18seconds_from_epochERK6string"></span><span id="license::seconds_from_epoch__stringCR"></span><span class="target" id="StringUtils_8cpp_1a310eddd114d9f7ad8422bfe8dd6c8860"></span>time_t <code class="sig-name descname">seconds_from_epoch</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>timeString</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license18seconds_from_epochERK6string" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license12split_stringERK6stringc">
+<span id="_CPPv3N7license12split_stringERK6stringc"></span><span id="_CPPv2N7license12split_stringERK6stringc"></span><span id="license::split_string__stringCR.c"></span><span class="target" id="StringUtils_8cpp_1a4ea301d3eb9433b456426771ce8f714c"></span><em class="property">const</em> vector&lt;string&gt; <code class="sig-name descname">split_string</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>licensePositions</em>, char <em>splitchar</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license12split_stringERK6stringc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="StringUtils_8cpp_1a1fc12ad75c98232e3c2125c1350b769d"></span><code class="sig-name descname">static const regex license::iniSection(&quot;?)</code></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="StringUtils_8cpp_1a3491273dadd3f2fb062d1378fcd0d3f7"></span><code class="sig-name descname">static const regex license::b64(&quot;^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$&quot;)</code></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license15identify_formatERK6string">
+<span id="_CPPv3N7license15identify_formatERK6string"></span><span id="_CPPv2N7license15identify_formatERK6string"></span><span id="license::identify_format__stringCR"></span><span class="target" id="StringUtils_8cpp_1aac957431e6c5a18edbff8ab87a15f174"></span><a class="reference internal" href="#_CPPv4N7license11FILE_FORMATE" title="license::FILE_FORMAT">FILE_FORMAT</a> <code class="sig-name descname">identify_format</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>license</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license15identify_formatERK6string" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license10mstrnlen_sEPKc6size_t">
+<span id="_CPPv3N7license10mstrnlen_sEPKc6size_t"></span><span id="_CPPv2N7license10mstrnlen_sEPKc6size_t"></span><span id="license::mstrnlen_s__cCP.s"></span><span class="target" id="StringUtils_8cpp_1a0a8260b97d2d6f1ab7a89041fddc49db"></span>size_t <code class="sig-name descname">mstrnlen_s</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>szptr</em>, size_t <em>maxsize</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license10mstrnlen_sEPKc6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license9trim_copyERKNSt6stringE">
+<span id="_CPPv3N7license9trim_copyERKNSt6stringE"></span><span id="_CPPv2N7license9trim_copyERKNSt6stringE"></span><span id="license::trim_copy__ssCR"></span><span class="target" id="StringUtils_8h_1ace7f7c6e489d8d60b45bbd94c442156e"></span>std::string <code class="sig-name descname">trim_copy</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>string_to_trim</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license9trim_copyERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Eliminate whitespace from both sides of a string and returns a copy of the string itself. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the trimmed string </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">string_to_trim</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license12toupper_copyERKNSt6stringE">
+<span id="_CPPv3N7license12toupper_copyERKNSt6stringE"></span><span id="_CPPv2N7license12toupper_copyERKNSt6stringE"></span><span id="license::toupper_copy__ssCR"></span><span class="target" id="StringUtils_8h_1a07481112fdd4ac2a2cba6f6a6a9831bd"></span>std::string <code class="sig-name descname">toupper_copy</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>lowercase</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license12toupper_copyERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license18seconds_from_epochERKNSt6stringE">
+<span id="_CPPv3N7license18seconds_from_epochERKNSt6stringE"></span><span id="_CPPv2N7license18seconds_from_epochERKNSt6stringE"></span><span id="license::seconds_from_epoch__ssCR"></span><span class="target" id="StringUtils_8h_1a90b81253c104285dbacfac6ae4e23865"></span>time_t <code class="sig-name descname">seconds_from_epoch</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>timeString</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license18seconds_from_epochERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license12split_stringERKNSt6stringEKc">
+<span id="_CPPv3N7license12split_stringERKNSt6stringEKc"></span><span id="_CPPv2N7license12split_stringERKNSt6stringEKc"></span><span id="license::split_string__ssCR.cC"></span><span class="target" id="StringUtils_8h_1a744e9a89b51179d5ff71774ac764589c"></span><em class="property">const</em> std::vector&lt;std::string&gt; <code class="sig-name descname">split_string</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>stringToBeSplit</em>, <em class="property">const</em> char <em>splitchar</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license12split_stringERKNSt6stringEKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Split a string on a given character </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license15identify_formatERKNSt6stringE">
+<span id="_CPPv3N7license15identify_formatERKNSt6stringE"></span><span id="_CPPv2N7license15identify_formatERKNSt6stringE"></span><span id="license::identify_format__ssCR"></span><span class="target" id="StringUtils_8h_1a1a60af75f50caa730665051349a712b1"></span><a class="reference internal" href="#_CPPv4N7license11FILE_FORMATE" title="license::FILE_FORMAT">FILE_FORMAT</a> <code class="sig-name descname">identify_format</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>license</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license15identify_formatERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Variables</p>
+<dl class="member">
+<dt id="_CPPv4N7license3b64E">
+<span id="_CPPv3N7license3b64E"></span><span id="_CPPv2N7license3b64E"></span><span id="license::b64__cCP"></span><span class="target" id="base64_8cpp_1a4dbb3e4472b58558580f02f23c267e51"></span><em class="property">const</em> char *<code class="sig-name descname">b64</code> = &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&quot;<a class="headerlink" href="#_CPPv4N7license3b64E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N7license5unb64E">
+<span id="_CPPv3N7license5unb64E"></span><span id="_CPPv2N7license5unb64E"></span><span id="license::unb64__unsigned-cCA"></span><span class="target" id="base64_8cpp_1af37c4454d15f88da51471a35725a3612"></span><em class="property">const</em> unsigned char <code class="sig-name descname">unb64</code>[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 62, 0, 0, 0, 63, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 0, 0, 0, 0, 0, 0, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,}<a class="headerlink" href="#_CPPv4N7license5unb64E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="EventRegistry_8cpp_1af821db6433bd3254c9cd1e4fd6ca2d0a"></span><code class="sig-name descname">const map&lt;LCC_EVENT_TYPE, int&gt; license::PROGRESS_BY_EVENT_TYPE= {	{LICENSE_SPECIFIED, 0}, {LICENSE_FOUND, 1}, {PRODUCT_FOUND, 2}, {SIGNATURE_VERIFIED, 3}, {LICENSE_OK, 4}}</code></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="class">
+<dt id="_CPPv4N7license13EventRegistryE">
+<span id="_CPPv3N7license13EventRegistryE"></span><span id="_CPPv2N7license13EventRegistryE"></span><span id="license::EventRegistry"></span><span class="target" id="classlicense_1_1EventRegistry"></span><em class="property">class </em><code class="sig-name descname">EventRegistry</code><a class="headerlink" href="#_CPPv4N7license13EventRegistryE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;EventRegistry.h&gt;</em><p>Tracks the events relative to a license and provide explanation regarding failures to verify licenses. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N7license13EventRegistry22turnWarningsIntoErrorsEv">
+<span id="_CPPv3N7license13EventRegistry22turnWarningsIntoErrorsEv"></span><span id="_CPPv2N7license13EventRegistry22turnWarningsIntoErrorsEv"></span><span id="license::EventRegistry::turnWarningsIntoErrors"></span><span class="target" id="classlicense_1_1EventRegistry_1a487c3fa44debe95ebfee0abb1ab16d42"></span>bool <code class="sig-name descname">turnWarningsIntoErrors</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license13EventRegistry22turnWarningsIntoErrorsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Turn the event warning for the license with the most advanced status into an error. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK7license13EventRegistry14getLastFailureEv">
+<span id="_CPPv3NK7license13EventRegistry14getLastFailureEv"></span><span id="_CPPv2NK7license13EventRegistry14getLastFailureEv"></span><span id="license::EventRegistry::getLastFailureC"></span><span class="target" id="classlicense_1_1EventRegistry_1afbf3f6cd6af9ad4ef2a32815095b9e7b"></span><em class="property">const</em> AuditEvent *<code class="sig-name descname">getLastFailure</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK7license13EventRegistry14getLastFailureEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return the last failure (event with warn or error status) for the license with the most advanced status. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>NULL if no failures are found. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv4N7license13LicenseReaderE">
+<span id="_CPPv3N7license13LicenseReaderE"></span><span id="_CPPv2N7license13LicenseReaderE"></span><span id="license::LicenseReader"></span><span class="target" id="classlicense_1_1LicenseReader"></span><em class="property">class </em><code class="sig-name descname">LicenseReader</code><a class="headerlink" href="#_CPPv4N7license13LicenseReaderE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;LicenseReader.hpp&gt;</em><p>This class it is responsible to read the licenses from the disk (in future from network) examining all the possible LicenseLocation positions.</p>
+<p>Each section of the ini file represents a product.  </p>
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv4N7license13hw_identifierE">
+<span id="_CPPv3N7license13hw_identifierE"></span><span id="_CPPv2N7license13hw_identifierE"></span><span id="license::hw_identifier"></span><span class="target" id="namespacelicense_1_1hw__identifier"></span><em class="property">namespace </em><code class="sig-name descname">hw_identifier</code><a class="headerlink" href="#_CPPv4N7license13hw_identifierE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv4N7license13hw_identifier20available_strategiesEv">
+<span id="_CPPv3N7license13hw_identifier20available_strategiesEv"></span><span id="_CPPv2N7license13hw_identifier20available_strategiesEv"></span><span id="license::hw_identifier::available_strategies"></span><span class="target" id="default__strategy_8cpp_1a386006635560385d0ca865f74c1da3f1"></span><em class="property">static</em> vector&lt;LCC_API_IDENTIFICATION_STRATEGY&gt; <code class="sig-name descname">available_strategies</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license13hw_identifier20available_strategiesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license13hw_identifier19generate_disk_pc_idER6vectorI5arrayI7uint8_t30HW_IDENTIFIER_PROPRIETARY_DATAEEb">
+<span id="_CPPv3N7license13hw_identifier19generate_disk_pc_idER6vectorI5arrayI7uint8_t30HW_IDENTIFIER_PROPRIETARY_DATAEEb"></span><span id="_CPPv2N7license13hw_identifier19generate_disk_pc_idER6vectorI5arrayI7uint8_t30HW_IDENTIFIER_PROPRIETARY_DATAEEb"></span><span id="license::hw_identifier::generate_disk_pc_id__vector:array:uint8_t.HW_IDENTIFIER_PROPRIETARY_DATA::R.b"></span><span class="target" id="disk__strategy_8cpp_1aa38e56461db465affcb9d918575c741c"></span><em class="property">static</em> FUNCTION_RETURN <code class="sig-name descname">generate_disk_pc_id</code><span class="sig-paren">(</span>vector&lt;array&lt;uint8_t, HW_IDENTIFIER_PROPRIETARY_DATA&gt;&gt; &amp;<em>v_disk_id</em>, bool <em>use_id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license13hw_identifier19generate_disk_pc_idER6vectorI5arrayI7uint8_t30HW_IDENTIFIER_PROPRIETARY_DATAEEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license13hw_identifier23generate_ethernet_pc_idER6vectorI5arrayI7uint8_t30HW_IDENTIFIER_PROPRIETARY_DATAEEKb">
+<span id="_CPPv3N7license13hw_identifier23generate_ethernet_pc_idER6vectorI5arrayI7uint8_t30HW_IDENTIFIER_PROPRIETARY_DATAEEKb"></span><span id="_CPPv2N7license13hw_identifier23generate_ethernet_pc_idER6vectorI5arrayI7uint8_t30HW_IDENTIFIER_PROPRIETARY_DATAEEKb"></span><span id="license::hw_identifier::generate_ethernet_pc_id__vector:array:uint8_t.HW_IDENTIFIER_PROPRIETARY_DATA::R.bC"></span><span class="target" id="ethernet_8cpp_1a7a14269310a728e9047771e76035b007"></span><em class="property">static</em> FUNCTION_RETURN <code class="sig-name descname">generate_ethernet_pc_id</code><span class="sig-paren">(</span>vector&lt;array&lt;uint8_t, HW_IDENTIFIER_PROPRIETARY_DATA&gt;&gt; &amp;<em>data</em>, <em class="property">const</em> bool <em>use_ip</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license13hw_identifier23generate_ethernet_pc_idER6vectorI5arrayI7uint8_t30HW_IDENTIFIER_PROPRIETARY_DATAEEKb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license13hw_identifiereqERK12HwIdentifierRK12HwIdentifier">
+<span id="_CPPv3N7license13hw_identifiereqERK12HwIdentifierRK12HwIdentifier"></span><span id="_CPPv2N7license13hw_identifiereqERK12HwIdentifierRK12HwIdentifier"></span><span id="license::hw_identifier::eq-operator__HwIdentifierCR.HwIdentifierCR"></span><span class="target" id="hw__identifier_8cpp_1aef3b51deefcc74fa0a9d56d634bd7494"></span>bool <code class="sig-name descname">operator==</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N7license13hw_identifier12HwIdentifierE" title="license::hw_identifier::HwIdentifier">HwIdentifier</a> &amp;<em>lhs</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N7license13hw_identifier12HwIdentifierE" title="license::hw_identifier::HwIdentifier">HwIdentifier</a> &amp;<em>rhs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license13hw_identifiereqERK12HwIdentifierRK12HwIdentifier" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="class">
+<dt id="_CPPv4N7license13hw_identifier12HwIdentifierE">
+<span id="_CPPv3N7license13hw_identifier12HwIdentifierE"></span><span id="_CPPv2N7license13hw_identifier12HwIdentifierE"></span><span id="license::hw_identifier::HwIdentifier"></span><span class="target" id="classlicense_1_1hw__identifier_1_1HwIdentifier"></span><em class="property">class </em><code class="sig-name descname">HwIdentifier</code><a class="headerlink" href="#_CPPv4N7license13hw_identifier12HwIdentifierE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;hw_identifier.hpp&gt;</em><p>data[0] bit 7 = 0 if pc id is being generated 1 if it is coming from an issued license.</p>
+<p>if bit 7 = 0 bit 6 = environment variable was used to generate pc_id bit 5-4 = execution environment information (0=BARE_TO_METAL,1=VM,2=CONTAINER) bit 3 = 0 on premise vm 1 = cloud if on premise vm bits 2-1-0 are virtualization technology if cloud vm bits 2-1-0 identify cloud provider</p>
+<p>if bit 7 = 1 hardware identifier is used to enable some flag that we don’t want to show openly in the license <em>bit 6 = 1 enable magic file/registry key </em></p>
+<p>data[1] bit 7-6-5 define identification strategy. data[1] bits 4-0, data[2-8] are hardware identifier proprietary strategy data. </p>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv4N7license13hw_identifier18HwIdentifierFacadeE">
+<span id="_CPPv3N7license13hw_identifier18HwIdentifierFacadeE"></span><span id="_CPPv2N7license13hw_identifier18HwIdentifierFacadeE"></span><span id="license::hw_identifier::HwIdentifierFacade"></span><span class="target" id="classlicense_1_1hw__identifier_1_1HwIdentifierFacade"></span><em class="property">class </em><code class="sig-name descname">HwIdentifierFacade</code><a class="headerlink" href="#_CPPv4N7license13hw_identifier18HwIdentifierFacadeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="function">
+<dt id="_CPPv4N7license13hw_identifier18HwIdentifierFacade26generate_user_pc_signatureE31LCC_API_IDENTIFICATION_STRATEGY">
+<span id="_CPPv3N7license13hw_identifier18HwIdentifierFacade26generate_user_pc_signatureE31LCC_API_IDENTIFICATION_STRATEGY"></span><span id="_CPPv2N7license13hw_identifier18HwIdentifierFacade26generate_user_pc_signatureE31LCC_API_IDENTIFICATION_STRATEGY"></span><span id="license::hw_identifier::HwIdentifierFacade::generate_user_pc_signature__LCC_API_IDENTIFICATION_STRATEGY"></span><span class="target" id="classlicense_1_1hw__identifier_1_1HwIdentifierFacade_1a94f363562a9372fc1ec68bc0cf2da8c3"></span>std::string <code class="sig-name descname">generate_user_pc_signature</code><span class="sig-paren">(</span>LCC_API_IDENTIFICATION_STRATEGY <em>strategy</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license13hw_identifier18HwIdentifierFacade26generate_user_pc_signatureE31LCC_API_IDENTIFICATION_STRATEGY" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p></p>
+</dd>
+<dt><strong>Exceptions</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">logic_error</span></code>: if pc_identifier can’t be generated. </p></li>
+</ul>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">strategy</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv4N7license13hw_identifier22IdentificationStrategyE">
+<span id="_CPPv3N7license13hw_identifier22IdentificationStrategyE"></span><span id="_CPPv2N7license13hw_identifier22IdentificationStrategyE"></span><span id="license::hw_identifier::IdentificationStrategy"></span><span class="target" id="classlicense_1_1hw__identifier_1_1IdentificationStrategy"></span><em class="property">class </em><code class="sig-name descname">IdentificationStrategy</code><a class="headerlink" href="#_CPPv4N7license13hw_identifier22IdentificationStrategyE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Subclassed by license::hw_identifier::DefaultStrategy, license::hw_identifier::DiskStrategy, license::hw_identifier::Ethernet</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="function">
+<dt id="_CPPv4N7license13hw_identifier22IdentificationStrategy12get_strategyE31LCC_API_IDENTIFICATION_STRATEGY">
+<span id="_CPPv3N7license13hw_identifier22IdentificationStrategy12get_strategyE31LCC_API_IDENTIFICATION_STRATEGY"></span><span id="_CPPv2N7license13hw_identifier22IdentificationStrategy12get_strategyE31LCC_API_IDENTIFICATION_STRATEGY"></span><span id="license::hw_identifier::IdentificationStrategy::get_strategy__LCC_API_IDENTIFICATION_STRATEGY"></span><span class="target" id="classlicense_1_1hw__identifier_1_1IdentificationStrategy_1a45a804714516d11be8bd0b125c1e5a58"></span>std::unique_ptr&lt;<a class="reference internal" href="#_CPPv4N7license13hw_identifier22IdentificationStrategyE" title="license::hw_identifier::IdentificationStrategy">IdentificationStrategy</a>&gt; <code class="sig-name descname">get_strategy</code><span class="sig-paren">(</span>LCC_API_IDENTIFICATION_STRATEGY <em>strategy</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license13hw_identifier22IdentificationStrategy12get_strategyE31LCC_API_IDENTIFICATION_STRATEGY" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Factory method to create an instance of <a class="reference internal" href="#classlicense_1_1hw__identifier_1_1IdentificationStrategy"><span class="std std-ref">IdentificationStrategy</span></a> <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p></p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">strategy</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv4N7license6locateE">
+<span id="_CPPv3N7license6locateE"></span><span id="_CPPv2N7license6locateE"></span><span id="license::locate"></span><span class="target" id="namespacelicense_1_1locate"></span><em class="property">namespace </em><code class="sig-name descname">locate</code><a class="headerlink" href="#_CPPv4N7license6locateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Variables</p>
+<dl class="member">
+<dt id="_CPPv4N7license6locate16extra_strategiesE">
+<span id="_CPPv3N7license6locate16extra_strategiesE"></span><span id="_CPPv2N7license6locate16extra_strategiesE"></span><span id="license::locate::extra_strategies__std::vector:std::unique_ptr:LocatorStrategy::"></span><span class="target" id="LocatorFactory_8cpp_1a447c3e54e407599ad9ab13ee0e64ed88"></span>std::vector&lt;std::unique_ptr&lt;<a class="reference internal" href="#_CPPv4N7license6locate15LocatorStrategyE" title="license::locate::LocatorStrategy">LocatorStrategy</a>&gt;&gt; <code class="sig-name descname">extra_strategies</code><a class="headerlink" href="#_CPPv4N7license6locate16extra_strategiesE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="class">
+<dt id="_CPPv4N7license6locate17ApplicationFolderE">
+<span id="_CPPv3N7license6locate17ApplicationFolderE"></span><span id="_CPPv2N7license6locate17ApplicationFolderE"></span><span id="license::locate::ApplicationFolder"></span><span class="target" id="classlicense_1_1locate_1_1ApplicationFolder"></span><em class="property">class </em><code class="sig-name descname">ApplicationFolder</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv47license" title="license">license</a>::<a class="reference internal" href="#_CPPv4N7license6locateE" title="license::locate">locate</a>::<a class="reference internal" href="#_CPPv4N7license6locate15LocatorStrategyE" title="license::locate::LocatorStrategy">LocatorStrategy</a><a class="headerlink" href="#_CPPv4N7license6locate17ApplicationFolderE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N7license6locate17ApplicationFolder17license_locationsER13EventRegistry">
+<span id="_CPPv3N7license6locate17ApplicationFolder17license_locationsER13EventRegistry"></span><span id="_CPPv2N7license6locate17ApplicationFolder17license_locationsER13EventRegistry"></span><span id="license::locate::ApplicationFolder::license_locations__EventRegistryR"></span><span class="target" id="classlicense_1_1locate_1_1ApplicationFolder_1aaa4a95eed7d46ee7baa39bb1654e6d47"></span><em class="property">const</em> vector&lt;string&gt; <code class="sig-name descname">license_locations</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N7license13EventRegistryE" title="license::EventRegistry">EventRegistry</a> &amp;<em>eventRegistry</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license6locate17ApplicationFolder17license_locationsER13EventRegistry" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Try to find licenses <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A list of identifiers for call retrieve_license_content. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">eventRegistry</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv4N7license6locate18EnvironmentVarDataE">
+<span id="_CPPv3N7license6locate18EnvironmentVarDataE"></span><span id="_CPPv2N7license6locate18EnvironmentVarDataE"></span><span id="license::locate::EnvironmentVarData"></span><span class="target" id="classlicense_1_1locate_1_1EnvironmentVarData"></span><em class="property">class </em><code class="sig-name descname">EnvironmentVarData</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv47license" title="license">license</a>::<a class="reference internal" href="#_CPPv4N7license6locateE" title="license::locate">locate</a>::<a class="reference internal" href="#_CPPv4N7license6locate15LocatorStrategyE" title="license::locate::LocatorStrategy">LocatorStrategy</a><a class="headerlink" href="#_CPPv4N7license6locate18EnvironmentVarDataE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N7license6locate18EnvironmentVarData17license_locationsER13EventRegistry">
+<span id="_CPPv3N7license6locate18EnvironmentVarData17license_locationsER13EventRegistry"></span><span id="_CPPv2N7license6locate18EnvironmentVarData17license_locationsER13EventRegistry"></span><span id="license::locate::EnvironmentVarData::license_locations__EventRegistryR"></span><span class="target" id="classlicense_1_1locate_1_1EnvironmentVarData_1a402c010ad9bb543a97d3531fa0c5281f"></span><em class="property">const</em> vector&lt;string&gt; <code class="sig-name descname">license_locations</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N7license13EventRegistryE" title="license::EventRegistry">EventRegistry</a> &amp;<em>eventRegistry</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license6locate18EnvironmentVarData17license_locationsER13EventRegistry" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Try to find licenses <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A list of identifiers for call retrieve_license_content. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">eventRegistry</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK7license6locate18EnvironmentVarData24retrieve_license_contentERKNSt6stringE">
+<span id="_CPPv3NK7license6locate18EnvironmentVarData24retrieve_license_contentERKNSt6stringE"></span><span id="_CPPv2NK7license6locate18EnvironmentVarData24retrieve_license_contentERKNSt6stringE"></span><span id="license::locate::EnvironmentVarData::retrieve_license_content__ssCRC"></span><span class="target" id="classlicense_1_1locate_1_1EnvironmentVarData_1a22d39aef5372c4b2d726545c022d5066"></span><em class="property">const</em> std::string <code class="sig-name descname">retrieve_license_content</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>licenseLocationId</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK7license6locate18EnvironmentVarData24retrieve_license_contentERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Default implementation is to retrieve the license from file. Subclasses may override it. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a string containing the license data in INI format. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">licenseLocationId</span></code>: String that identifies the license. It is usually the file name but can be whatever is understood by the class </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv4N7license6locate22EnvironmentVarLocationE">
+<span id="_CPPv3N7license6locate22EnvironmentVarLocationE"></span><span id="_CPPv2N7license6locate22EnvironmentVarLocationE"></span><span id="license::locate::EnvironmentVarLocation"></span><span class="target" id="classlicense_1_1locate_1_1EnvironmentVarLocation"></span><em class="property">class </em><code class="sig-name descname">EnvironmentVarLocation</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv47license" title="license">license</a>::<a class="reference internal" href="#_CPPv4N7license6locateE" title="license::locate">locate</a>::<a class="reference internal" href="#_CPPv4N7license6locate15LocatorStrategyE" title="license::locate::LocatorStrategy">LocatorStrategy</a><a class="headerlink" href="#_CPPv4N7license6locate22EnvironmentVarLocationE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N7license6locate22EnvironmentVarLocation17license_locationsER13EventRegistry">
+<span id="_CPPv3N7license6locate22EnvironmentVarLocation17license_locationsER13EventRegistry"></span><span id="_CPPv2N7license6locate22EnvironmentVarLocation17license_locationsER13EventRegistry"></span><span id="license::locate::EnvironmentVarLocation::license_locations__EventRegistryR"></span><span class="target" id="classlicense_1_1locate_1_1EnvironmentVarLocation_1abca15caec16e1fdf80cf112342b09ba5"></span><em class="property">const</em> vector&lt;string&gt; <code class="sig-name descname">license_locations</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N7license13EventRegistryE" title="license::EventRegistry">EventRegistry</a> &amp;<em>eventRegistry</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license6locate22EnvironmentVarLocation17license_locationsER13EventRegistry" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Try to find licenses <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A list of identifiers for call retrieve_license_content. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">eventRegistry</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv4N7license6locate18ExternalDefinitionE">
+<span id="_CPPv3N7license6locate18ExternalDefinitionE"></span><span id="_CPPv2N7license6locate18ExternalDefinitionE"></span><span id="license::locate::ExternalDefinition"></span><span class="target" id="classlicense_1_1locate_1_1ExternalDefinition"></span><em class="property">class </em><code class="sig-name descname">ExternalDefinition</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv47license" title="license">license</a>::<a class="reference internal" href="#_CPPv4N7license6locateE" title="license::locate">locate</a>::<a class="reference internal" href="#_CPPv4N7license6locate15LocatorStrategyE" title="license::locate::LocatorStrategy">LocatorStrategy</a><a class="headerlink" href="#_CPPv4N7license6locate18ExternalDefinitionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N7license6locate18ExternalDefinition17license_locationsER13EventRegistry">
+<span id="_CPPv3N7license6locate18ExternalDefinition17license_locationsER13EventRegistry"></span><span id="_CPPv2N7license6locate18ExternalDefinition17license_locationsER13EventRegistry"></span><span id="license::locate::ExternalDefinition::license_locations__EventRegistryR"></span><span class="target" id="classlicense_1_1locate_1_1ExternalDefinition_1ab442dea96794c6577e630806e8417be2"></span><em class="property">const</em> std::vector&lt;std::string&gt; <code class="sig-name descname">license_locations</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N7license13EventRegistryE" title="license::EventRegistry">EventRegistry</a> &amp;<em>eventRegistry</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license6locate18ExternalDefinition17license_locationsER13EventRegistry" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Try to find licenses <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A list of identifiers for call retrieve_license_content. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">eventRegistry</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK7license6locate18ExternalDefinition24retrieve_license_contentERKNSt6stringE">
+<span id="_CPPv3NK7license6locate18ExternalDefinition24retrieve_license_contentERKNSt6stringE"></span><span id="_CPPv2NK7license6locate18ExternalDefinition24retrieve_license_contentERKNSt6stringE"></span><span id="license::locate::ExternalDefinition::retrieve_license_content__ssCRC"></span><span class="target" id="classlicense_1_1locate_1_1ExternalDefinition_1a4602ec00b7ebe446b575c54d4b358ae4"></span><em class="property">const</em> std::string <code class="sig-name descname">retrieve_license_content</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>licenseLocationId</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK7license6locate18ExternalDefinition24retrieve_license_contentERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Default implementation is to retrieve the license from file. Subclasses may override it. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a string containing the license data in INI format. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">licenseLocationId</span></code>: String that identifies the license. It is usually the file name but can be whatever is understood by the class </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv4N7license6locate15LocatorStrategyE">
+<span id="_CPPv3N7license6locate15LocatorStrategyE"></span><span id="_CPPv2N7license6locate15LocatorStrategyE"></span><span id="license::locate::LocatorStrategy"></span><span class="target" id="classlicense_1_1locate_1_1LocatorStrategy"></span><em class="property">class </em><code class="sig-name descname">LocatorStrategy</code><a class="headerlink" href="#_CPPv4N7license6locate15LocatorStrategyE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;LocatorStrategy.hpp&gt;</em><p>This class provides a common interface to find and retrieve licenses from different sources and positions.</p>
+<p>Usage: <ol class="arabic simple">
+<li><p>call licenseLocations to get a list of available locations (the returned format is defined by the class, it’s usually the file name) </p></li>
+<li><p>iterate over the returned vector and call retrieveLicense to get the content of the license </p></li>
+</ol>
+</p>
+<p>Subclassed by <a class="reference internal" href="#classlicense_1_1locate_1_1ApplicationFolder"><span class="std std-ref">license::locate::ApplicationFolder</span></a>, <a class="reference internal" href="#classlicense_1_1locate_1_1EnvironmentVarData"><span class="std std-ref">license::locate::EnvironmentVarData</span></a>, <a class="reference internal" href="#classlicense_1_1locate_1_1EnvironmentVarLocation"><span class="std std-ref">license::locate::EnvironmentVarLocation</span></a>, <a class="reference internal" href="#classlicense_1_1locate_1_1ExternalDefinition"><span class="std std-ref">license::locate::ExternalDefinition</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N7license6locate15LocatorStrategy17license_locationsER13EventRegistry">
+<span id="_CPPv3N7license6locate15LocatorStrategy17license_locationsER13EventRegistry"></span><span id="_CPPv2N7license6locate15LocatorStrategy17license_locationsER13EventRegistry"></span><span id="license::locate::LocatorStrategy::license_locations__EventRegistryR"></span><span class="target" id="classlicense_1_1locate_1_1LocatorStrategy_1a96e8204998df7203e260a63a46498df8"></span><em class="property">virtual</em> <em class="property">const</em> std::vector&lt;std::string&gt; <code class="sig-name descname">license_locations</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N7license13EventRegistryE" title="license::EventRegistry">EventRegistry</a> &amp;<em>eventRegistry</em><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv4N7license6locate15LocatorStrategy17license_locationsER13EventRegistry" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Try to find licenses <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A list of identifiers for call retrieve_license_content. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">eventRegistry</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK7license6locate15LocatorStrategy24retrieve_license_contentERKNSt6stringE">
+<span id="_CPPv3NK7license6locate15LocatorStrategy24retrieve_license_contentERKNSt6stringE"></span><span id="_CPPv2NK7license6locate15LocatorStrategy24retrieve_license_contentERKNSt6stringE"></span><span id="license::locate::LocatorStrategy::retrieve_license_content__ssCRC"></span><span class="target" id="classlicense_1_1locate_1_1LocatorStrategy_1a3cebd658245f72db176f49c7a036fbd4"></span><em class="property">const</em> string <code class="sig-name descname">retrieve_license_content</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>licenseLocationId</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK7license6locate15LocatorStrategy24retrieve_license_contentERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Default implementation is to retrieve the license from file. Subclasses may override it. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a string containing the license data in INI format. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">licenseLocationId</span></code>: String that identifies the license. It is usually the file name but can be whatever is understood by the class </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv4N7license2osE">
+<span id="_CPPv3N7license2osE"></span><span id="_CPPv2N7license2osE"></span><span id="license::os"></span><span class="target" id="namespacelicense_1_1os"></span><em class="property">namespace </em><code class="sig-name descname">os</code><a class="headerlink" href="#_CPPv4N7license2osE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Typedefs</p>
+<dl class="type">
+<dt id="_CPPv4N7license2os13P_PUBKEY_BLOBE">
+<span id="_CPPv3N7license2os13P_PUBKEY_BLOBE"></span><span id="_CPPv2N7license2os13P_PUBKEY_BLOBE"></span><span id="license::os::P_PUBKEY_BLOB"></span><span class="target" id="windows_2signature__verifier_8cpp_1a370db0d158371b42e1cfd4de59d00ec7"></span><em class="property">typedef </em><em class="property">struct</em> <a class="reference internal" href="#_CPPv47license" title="license">license</a>::<a class="reference internal" href="#_CPPv4N7license2osE" title="license::os">os</a>::PUBKEY_BLOB *<code class="sig-name descname">P_PUBKEY_BLOB</code><a class="headerlink" href="#_CPPv4N7license2os13P_PUBKEY_BLOBE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Enums</p>
+<dl class="enum">
+<dt id="_CPPv4N7license2os21VIRTUALIZATION_DETAILE">
+<span id="_CPPv3N7license2os21VIRTUALIZATION_DETAILE"></span><span id="_CPPv2N7license2os21VIRTUALIZATION_DETAILE"></span><span class="target" id="cpu__info_8hpp_1a807c48ed5a0eb880b3fbe259f6cb186a"></span><em class="property">enum </em><code class="sig-name descname">VIRTUALIZATION_DETAIL</code><a class="headerlink" href="#_CPPv4N7license2os21VIRTUALIZATION_DETAILE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv4N7license2os13BARE_TO_METALE">
+<span id="_CPPv3N7license2os13BARE_TO_METALE"></span><span id="_CPPv2N7license2os13BARE_TO_METALE"></span><span class="target" id="cpu__info_8hpp_1a807c48ed5a0eb880b3fbe259f6cb186aa811207947c8224ff4e31ce9be1cb3127"></span><code class="sig-name descname">BARE_TO_METAL</code><a class="headerlink" href="#_CPPv4N7license2os13BARE_TO_METALE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N7license2os6VMWAREE">
+<span id="_CPPv3N7license2os6VMWAREE"></span><span id="_CPPv2N7license2os6VMWAREE"></span><span class="target" id="cpu__info_8hpp_1a807c48ed5a0eb880b3fbe259f6cb186aa8237fee8ddb7163612fba82f76029bd3"></span><code class="sig-name descname">VMWARE</code><a class="headerlink" href="#_CPPv4N7license2os6VMWAREE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N7license2os10VIRTUALBOXE">
+<span id="_CPPv3N7license2os10VIRTUALBOXE"></span><span id="_CPPv2N7license2os10VIRTUALBOXE"></span><span class="target" id="cpu__info_8hpp_1a807c48ed5a0eb880b3fbe259f6cb186aaa9b9237a76246d63e5af4d6bba9c0bb4"></span><code class="sig-name descname">VIRTUALBOX</code><a class="headerlink" href="#_CPPv4N7license2os10VIRTUALBOXE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N7license2os5V_XENE">
+<span id="_CPPv3N7license2os5V_XENE"></span><span id="_CPPv2N7license2os5V_XENE"></span><span class="target" id="cpu__info_8hpp_1a807c48ed5a0eb880b3fbe259f6cb186aa0c52d666fb89dcc11e3c7e3ec0d15bdf"></span><code class="sig-name descname">V_XEN</code><a class="headerlink" href="#_CPPv4N7license2os5V_XENE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N7license2os3KVME">
+<span id="_CPPv3N7license2os3KVME"></span><span id="_CPPv2N7license2os3KVME"></span><span class="target" id="cpu__info_8hpp_1a807c48ed5a0eb880b3fbe259f6cb186aaac78ecdc07adb7a481701e0007f18cdf"></span><code class="sig-name descname">KVM</code><a class="headerlink" href="#_CPPv4N7license2os3KVME" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N7license2os2HVE">
+<span id="_CPPv3N7license2os2HVE"></span><span id="_CPPv2N7license2os2HVE"></span><span class="target" id="cpu__info_8hpp_1a807c48ed5a0eb880b3fbe259f6cb186aa1635c58ad1b981ab184ab89eba9092ce"></span><code class="sig-name descname">HV</code><a class="headerlink" href="#_CPPv4N7license2os2HVE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N7license2os7V_OTHERE">
+<span id="_CPPv3N7license2os7V_OTHERE"></span><span id="_CPPv2N7license2os7V_OTHERE"></span><span class="target" id="cpu__info_8hpp_1a807c48ed5a0eb880b3fbe259f6cb186aad3866b8fa9254207bbd91f12c117285a"></span><code class="sig-name descname">V_OTHER</code><a class="headerlink" href="#_CPPv4N7license2os7V_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="enum">
+<dt id="_CPPv4N7license2os14VIRTUALIZATIONE">
+<span id="_CPPv3N7license2os14VIRTUALIZATIONE"></span><span id="_CPPv2N7license2os14VIRTUALIZATIONE"></span><span class="target" id="execution__environment_8hpp_1a17d48062edd9f28b1743db2dc809bcf2"></span><em class="property">enum </em><code class="sig-name descname">VIRTUALIZATION</code><a class="headerlink" href="#_CPPv4N7license2os14VIRTUALIZATIONE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv4N7license2os4NONEE">
+<span id="_CPPv3N7license2os4NONEE"></span><span id="_CPPv2N7license2os4NONEE"></span><span class="target" id="execution__environment_8hpp_1a17d48062edd9f28b1743db2dc809bcf2a8b0b6698b485abb1a0d7a2e9699b64cf"></span><code class="sig-name descname">NONE</code><a class="headerlink" href="#_CPPv4N7license2os4NONEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N7license2os9CONTAINERE">
+<span id="_CPPv3N7license2os9CONTAINERE"></span><span id="_CPPv2N7license2os9CONTAINERE"></span><span class="target" id="execution__environment_8hpp_1a17d48062edd9f28b1743db2dc809bcf2a0ffad2ce401e7b7cf18a8e8b91dc2bcd"></span><code class="sig-name descname">CONTAINER</code><a class="headerlink" href="#_CPPv4N7license2os9CONTAINERE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N7license2os2VME">
+<span id="_CPPv3N7license2os2VME"></span><span id="_CPPv2N7license2os2VME"></span><span class="target" id="execution__environment_8hpp_1a17d48062edd9f28b1743db2dc809bcf2a97a8b39cdd73519d9cb6fa5e34585792"></span><code class="sig-name descname">VM</code><a class="headerlink" href="#_CPPv4N7license2os2VME" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="enum">
+<dt id="_CPPv4N7license2os14CLOUD_PROVIDERE">
+<span id="_CPPv3N7license2os14CLOUD_PROVIDERE"></span><span id="_CPPv2N7license2os14CLOUD_PROVIDERE"></span><span class="target" id="execution__environment_8hpp_1a20b43057e67abff9d8cb461d7b3d8ad8"></span><em class="property">enum </em><code class="sig-name descname">CLOUD_PROVIDER</code><a class="headerlink" href="#_CPPv4N7license2os14CLOUD_PROVIDERE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv4N7license2os12PROV_UNKNOWNE">
+<span id="_CPPv3N7license2os12PROV_UNKNOWNE"></span><span id="_CPPv2N7license2os12PROV_UNKNOWNE"></span><span class="target" id="execution__environment_8hpp_1a20b43057e67abff9d8cb461d7b3d8ad8a49dec4160014a876dc76d295b962cf33"></span><code class="sig-name descname">PROV_UNKNOWN</code><a class="headerlink" href="#_CPPv4N7license2os12PROV_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N7license2os10ON_PREMISEE">
+<span id="_CPPv3N7license2os10ON_PREMISEE"></span><span id="_CPPv2N7license2os10ON_PREMISEE"></span><span class="target" id="execution__environment_8hpp_1a20b43057e67abff9d8cb461d7b3d8ad8a75eb267e942cae28b151364a327e5a2b"></span><code class="sig-name descname">ON_PREMISE</code><a class="headerlink" href="#_CPPv4N7license2os10ON_PREMISEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N7license2os12GOOGLE_CLOUDE">
+<span id="_CPPv3N7license2os12GOOGLE_CLOUDE"></span><span id="_CPPv2N7license2os12GOOGLE_CLOUDE"></span><span class="target" id="execution__environment_8hpp_1a20b43057e67abff9d8cb461d7b3d8ad8a6596dbe562f6e83eacbf6332d8d6ddea"></span><code class="sig-name descname">GOOGLE_CLOUD</code><a class="headerlink" href="#_CPPv4N7license2os12GOOGLE_CLOUDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N7license2os11AZURE_CLOUDE">
+<span id="_CPPv3N7license2os11AZURE_CLOUDE"></span><span id="_CPPv2N7license2os11AZURE_CLOUDE"></span><span class="target" id="execution__environment_8hpp_1a20b43057e67abff9d8cb461d7b3d8ad8a34bfe0e75b41d90825bfbf9af9523f3e"></span><code class="sig-name descname">AZURE_CLOUD</code><a class="headerlink" href="#_CPPv4N7license2os11AZURE_CLOUDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N7license2os3AWSE">
+<span id="_CPPv3N7license2os3AWSE"></span><span id="_CPPv2N7license2os3AWSE"></span><span class="target" id="execution__environment_8hpp_1a20b43057e67abff9d8cb461d7b3d8ad8a3c8b5e97217092f5c12e3cb24b9e5c7c"></span><code class="sig-name descname">AWS</code><a class="headerlink" href="#_CPPv4N7license2os3AWSE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N7license2os9ALI_CLOUDE">
+<span id="_CPPv3N7license2os9ALI_CLOUDE"></span><span id="_CPPv2N7license2os9ALI_CLOUDE"></span><span class="target" id="execution__environment_8hpp_1a20b43057e67abff9d8cb461d7b3d8ad8a3ffd73f0a30a2f61f5ac2fc4aaa886c3"></span><code class="sig-name descname">ALI_CLOUD</code><a class="headerlink" href="#_CPPv4N7license2os9ALI_CLOUDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>“/sys/class/dmi/id/bios_vendor” SeaBIOS “/sys/class/dmi/id/sys_vendor” Alibaba Cloud modalias “dmi:bvnSeaBIOS:bvrrel-1.7.5-0-ge51488c-20140602_164612-nilsson.home.kraxel.org:bd04/01/2014:svnAlibabaCloud:pnAlibabaCloudECS:pvrpc-i440fx-2.1:cvnAlibabaCloud:ct1:cvrpc-i440fx-2.1:” </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="enum">
+<dt id="_CPPv4N7license2os10IFACE_TYPEE">
+<span id="_CPPv3N7license2os10IFACE_TYPEE"></span><span id="_CPPv2N7license2os10IFACE_TYPEE"></span><span class="target" id="network_8hpp_1a4d8e4b01b8af9bb9e06b4a1713e333a6"></span><em class="property">enum </em><code class="sig-name descname">IFACE_TYPE</code><a class="headerlink" href="#_CPPv4N7license2os10IFACE_TYPEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv4N7license2os19IFACE_TYPE_ETHERNETE">
+<span id="_CPPv3N7license2os19IFACE_TYPE_ETHERNETE"></span><span id="_CPPv2N7license2os19IFACE_TYPE_ETHERNETE"></span><span class="target" id="network_8hpp_1a4d8e4b01b8af9bb9e06b4a1713e333a6a5486808daaa919e4960704bcfd9bcb18"></span><code class="sig-name descname">IFACE_TYPE_ETHERNET</code><a class="headerlink" href="#_CPPv4N7license2os19IFACE_TYPE_ETHERNETE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N7license2os19IFACE_TYPE_WIRELESSE">
+<span id="_CPPv3N7license2os19IFACE_TYPE_WIRELESSE"></span><span id="_CPPv2N7license2os19IFACE_TYPE_WIRELESSE"></span><span class="target" id="network_8hpp_1a4d8e4b01b8af9bb9e06b4a1713e333a6aa371187ef8b548f0bd2d6aaa655058e0"></span><code class="sig-name descname">IFACE_TYPE_WIRELESS</code><a class="headerlink" href="#_CPPv4N7license2os19IFACE_TYPE_WIRELESSE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv4N7license2os14get_cpu_vendorEv">
+<span id="_CPPv3N7license2os14get_cpu_vendorEv"></span><span id="_CPPv2N7license2os14get_cpu_vendorEv"></span><span id="license::os::get_cpu_vendor"></span><span class="target" id="linux_2cpu__info_8cpp_1a0612b7ba14cb14386f4fd9c83d1ea28a"></span><em class="property">static</em> string <code class="sig-name descname">get_cpu_vendor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license2os14get_cpu_vendorEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license2os13get_cpu_brandEv">
+<span id="_CPPv3N7license2os13get_cpu_brandEv"></span><span id="_CPPv2N7license2os13get_cpu_brandEv"></span><span id="license::os::get_cpu_brand"></span><span class="target" id="linux_2cpu__info_8cpp_1a960088208a0a0b450eaed3a84dfe2b98"></span><em class="property">static</em> string <code class="sig-name descname">get_cpu_brand</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license2os13get_cpu_brandEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license2os18checkContainerProcEv">
+<span id="_CPPv3N7license2os18checkContainerProcEv"></span><span id="_CPPv2N7license2os18checkContainerProcEv"></span><span id="license::os::checkContainerProc"></span><span class="target" id="linux_2execution__environment_8cpp_1aeb655ccf98702c6870f676bf8c724d67"></span><em class="property">static</em> int <code class="sig-name descname">checkContainerProc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license2os18checkContainerProcEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license2os21checkSystemdContainerEv">
+<span id="_CPPv3N7license2os21checkSystemdContainerEv"></span><span id="_CPPv2N7license2os21checkSystemdContainerEv"></span><span id="license::os::checkSystemdContainer"></span><span class="target" id="linux_2execution__environment_8cpp_1a50a711c7f748154202ebe825da9592bf"></span><em class="property">static</em> int <code class="sig-name descname">checkSystemdContainer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license2os21checkSystemdContainerEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license2os15getAdapterInfosER6vectorI13OsAdapterInfoE">
+<span id="_CPPv3N7license2os15getAdapterInfosER6vectorI13OsAdapterInfoE"></span><span id="_CPPv2N7license2os15getAdapterInfosER6vectorI13OsAdapterInfoE"></span><span id="license::os::getAdapterInfos__vector:OsAdapterInfo:R"></span><span class="target" id="linux_2network_8cpp_1a819464212933ac40306f269fcfe80dc5"></span>FUNCTION_RETURN <code class="sig-name descname">getAdapterInfos</code><span class="sig-paren">(</span>vector&lt;OsAdapterInfo&gt; &amp;<em>adapterInfos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license2os15getAdapterInfosER6vectorI13OsAdapterInfoE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p></p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">adapterInfos</span></code>: </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adapter_info_size</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license2os15getAdapterInfosERNSt6vectorI13OsAdapterInfoEE">
+<span id="_CPPv3N7license2os15getAdapterInfosERNSt6vectorI13OsAdapterInfoEE"></span><span id="_CPPv2N7license2os15getAdapterInfosERNSt6vectorI13OsAdapterInfoEE"></span><span id="license::os::getAdapterInfos__std::vector:OsAdapterInfo:R"></span><span class="target" id="network_8hpp_1a503914f7498362630840e8aafc5d758f"></span>FUNCTION_RETURN <code class="sig-name descname">getAdapterInfos</code><span class="sig-paren">(</span>std::vector&lt;OsAdapterInfo&gt; &amp;<em>adapterInfos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license2os15getAdapterInfosERNSt6vectorI13OsAdapterInfoEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license2os14free_resourcesEP8EVP_PKEYP10EVP_MD_CTX">
+<span id="_CPPv3N7license2os14free_resourcesEP8EVP_PKEYP10EVP_MD_CTX"></span><span id="_CPPv2N7license2os14free_resourcesEP8EVP_PKEYP10EVP_MD_CTX"></span><span id="license::os::free_resources__EVP_PKEYP.EVP_MD_CTXP"></span><span class="target" id="openssl_2signature__verifier_8cpp_1a592eb5c48401902c94b6e5937f995b3d"></span><em class="property">static</em> void <code class="sig-name descname">free_resources</code><span class="sig-paren">(</span>EVP_PKEY *<em>pkey</em>, EVP_MD_CTX *<em>mdctx</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license2os14free_resourcesEP8EVP_PKEYP10EVP_MD_CTX" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license2os10initializeEv">
+<span id="_CPPv3N7license2os10initializeEv"></span><span id="_CPPv2N7license2os10initializeEv"></span><span id="license::os::initialize"></span><span class="target" id="openssl_2signature__verifier_8cpp_1a67cad6d4bd77fd0596995510dcf4dd51"></span><em class="property">static</em> void <code class="sig-name descname">initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license2os10initializeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license2os16verify_signatureERKNSt6stringERKNSt6stringE">
+<span id="_CPPv3N7license2os16verify_signatureERKNSt6stringERKNSt6stringE"></span><span id="_CPPv2N7license2os16verify_signatureERKNSt6stringERKNSt6stringE"></span><span id="license::os::verify_signature__ssCR.ssCR"></span><span class="target" id="openssl_2signature__verifier_8cpp_1a361fa236778d91aaf7f246a333f0af6f"></span>FUNCTION_RETURN <code class="sig-name descname">verify_signature</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>stringToVerify</em>, <em class="property">const</em> std::string &amp;<em>signatureB64</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license2os16verify_signatureERKNSt6stringERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license2os14get_cpu_vendorEv">
+<span id="_CPPv3N7license2os14get_cpu_vendorEv"></span><span id="_CPPv2N7license2os14get_cpu_vendorEv"></span><span class="target" id="windows_2cpu__info_8cpp_1a0612b7ba14cb14386f4fd9c83d1ea28a"></span><em class="property">static</em> string <code class="sig-name descname">get_cpu_vendor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license2os13get_cpu_brandEv">
+<span id="_CPPv3N7license2os13get_cpu_brandEv"></span><span id="_CPPv2N7license2os13get_cpu_brandEv"></span><span class="target" id="windows_2cpu__info_8cpp_1a960088208a0a0b450eaed3a84dfe2b98"></span><em class="property">static</em> string <code class="sig-name descname">get_cpu_brand</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license2os14wine_containerEv">
+<span id="_CPPv3N7license2os14wine_containerEv"></span><span id="_CPPv2N7license2os14wine_containerEv"></span><span id="license::os::wine_container"></span><span class="target" id="windows_2execution__environment_8cpp_1a70a7ac50835ebc70e534ed87ba303df6"></span>int <code class="sig-name descname">wine_container</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license2os14wine_containerEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license2os9translateEAL16E_cAL4E_h">
+<span id="_CPPv3N7license2os9translateEAL16E_cAL4E_h"></span><span id="_CPPv2N7license2os9translateEA16_cA4_h"></span><span id="license::os::translate__cA.unsigned-cA"></span><span class="target" id="windows_2network_8cpp_1a20f7467e378c829ba1ae3f81f611a97a"></span><em class="property">static</em> int <code class="sig-name descname">translate</code><span class="sig-paren">(</span>char <em>ipStringIn</em>[16], unsigned char <em>ipv4</em>[4]<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license2os9translateEAL16E_cAL4E_h" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license2os11formatErrorE5DWORDPKc">
+<span id="_CPPv3N7license2os11formatErrorE5DWORDPKc"></span><span id="_CPPv2N7license2os11formatErrorE5DWORDPKc"></span><span id="license::os::formatError__DWORD.cCP"></span><span class="target" id="windows_2signature__verifier_8cpp_1a7c97bc4d8ce7a1e0bc5f8d697580dfd6"></span><em class="property">static</em> <em class="property">const</em> void <code class="sig-name descname">formatError</code><span class="sig-paren">(</span>DWORD <em>status</em>, <em class="property">const</em> char *<em>description</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license2os11formatErrorE5DWORDPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license2os16openHashProviderEv">
+<span id="_CPPv3N7license2os16openHashProviderEv"></span><span id="_CPPv2N7license2os16openHashProviderEv"></span><span id="license::os::openHashProvider"></span><span class="target" id="windows_2signature__verifier_8cpp_1a35a6721dedfdfa7d60a0bec95801e7a9"></span><em class="property">static</em> BCRYPT_ALG_HANDLE <code class="sig-name descname">openHashProvider</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license2os16openHashProviderEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license2os8hashDataER18BCRYPT_HASH_HANDLERK6string5PBYTE5DWORD">
+<span id="_CPPv3N7license2os8hashDataER18BCRYPT_HASH_HANDLERK6string5PBYTE5DWORD"></span><span id="_CPPv2N7license2os8hashDataER18BCRYPT_HASH_HANDLERK6string5PBYTE5DWORD"></span><span id="license::os::hashData__BCRYPT_HASH_HANDLER.stringCR.PBYTE.DWORD"></span><span class="target" id="windows_2signature__verifier_8cpp_1aba2a17957a8f722a208f1e2f609b104c"></span><em class="property">static</em> DWORD <code class="sig-name descname">hashData</code><span class="sig-paren">(</span>BCRYPT_HASH_HANDLE &amp;<em>hHash</em>, <em class="property">const</em> string &amp;<em>data</em>, PBYTE <em>pbHash</em>, DWORD <em>hashDataLenght</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license2os8hashDataER18BCRYPT_HASH_HANDLERK6string5PBYTE5DWORD" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license2os11read_lengthERP7uint8_t">
+<span id="_CPPv3N7license2os11read_lengthERP7uint8_t"></span><span id="_CPPv2N7license2os11read_lengthERP7uint8_t"></span><span id="license::os::read_length__uint8_tPR"></span><span class="target" id="windows_2signature__verifier_8cpp_1acd6b105d9181314cea8558d8565d0f2b"></span><em class="property">static</em> size_t <code class="sig-name descname">read_length</code><span class="sig-paren">(</span>uint8_t *&amp;<em>ptr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license2os11read_lengthERP7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license2os13read_sequenceERP7uint8_t">
+<span id="_CPPv3N7license2os13read_sequenceERP7uint8_t"></span><span id="_CPPv2N7license2os13read_sequenceERP7uint8_t"></span><span id="license::os::read_sequence__uint8_tPR"></span><span class="target" id="windows_2signature__verifier_8cpp_1aa78fa5476862ed10a267695861e1aa9e"></span><em class="property">static</em> FUNCTION_RETURN <code class="sig-name descname">read_sequence</code><span class="sig-paren">(</span>uint8_t *&amp;<em>ptr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license2os13read_sequenceERP7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license2os12read_integerERP7uint8_tP4BYTEK6size_t">
+<span id="_CPPv3N7license2os12read_integerERP7uint8_tP4BYTEK6size_t"></span><span id="_CPPv2N7license2os12read_integerERP7uint8_tP4BYTEK6size_t"></span><span id="license::os::read_integer__uint8_tPR.BYTEP.sC"></span><span class="target" id="windows_2signature__verifier_8cpp_1a6891fc17fc615cc399c6a242ed1855fe"></span><em class="property">static</em> FUNCTION_RETURN <code class="sig-name descname">read_integer</code><span class="sig-paren">(</span>uint8_t *&amp;<em>ptr</em>, BYTE *<em>location</em>, <em class="property">const</em> size_t <em>expected_length</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license2os12read_integerERP7uint8_tP4BYTEK6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license2os13readPublicKeyEK17BCRYPT_ALG_HANDLEP17BCRYPT_KEY_HANDLE">
+<span id="_CPPv3N7license2os13readPublicKeyEK17BCRYPT_ALG_HANDLEP17BCRYPT_KEY_HANDLE"></span><span id="_CPPv2N7license2os13readPublicKeyEK17BCRYPT_ALG_HANDLEP17BCRYPT_KEY_HANDLE"></span><span id="license::os::readPublicKey__BCRYPT_ALG_HANDLEC.BCRYPT_KEY_HANDLEP"></span><span class="target" id="windows_2signature__verifier_8cpp_1aa12f5769036cc4a1940769dd7824cf8c"></span><em class="property">static</em> FUNCTION_RETURN <code class="sig-name descname">readPublicKey</code><span class="sig-paren">(</span><em class="property">const</em> BCRYPT_ALG_HANDLE <em>sig_alg</em>, BCRYPT_KEY_HANDLE *<em>hKey</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license2os13readPublicKeyEK17BCRYPT_ALG_HANDLEP17BCRYPT_KEY_HANDLE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N7license2os10verifyHashEK5PBYTEK5DWORDRK6string">
+<span id="_CPPv3N7license2os10verifyHashEK5PBYTEK5DWORDRK6string"></span><span id="_CPPv2N7license2os10verifyHashEK5PBYTEK5DWORDRK6string"></span><span id="license::os::verifyHash__PBYTEC.DWORDC.stringCR"></span><span class="target" id="windows_2signature__verifier_8cpp_1ae31e9b3faeb66790b2717942a7d3bd65"></span><em class="property">static</em> FUNCTION_RETURN <code class="sig-name descname">verifyHash</code><span class="sig-paren">(</span><em class="property">const</em> PBYTE <em>pbHash</em>, <em class="property">const</em> DWORD <em>hashDataLenght</em>, <em class="property">const</em> string &amp;<em>signatureBuffer</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7license2os10verifyHashEK5PBYTEK5DWORDRK6string" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Variables</p>
+<dl class="member">
+<dt>
+<span class="target" id="cpu__info__common_8cpp_1af73078d1457134cf961cb6be5feb54f4"></span><code class="sig-name descname">const unordered_map&lt;string, VIRTUALIZATION_DETAIL&gt; license::os::virtual_cpu_names{	{&quot;bhyve bhyve &quot;, V_OTHER}, {&quot;KVMKVMKVM&quot;, KVM},		  {&quot;Microsoft Hv&quot;, HV},	{&quot; lrpepyh vr&quot;, HV},	   {&quot;prl hyperv  &quot;, V_OTHER}, {&quot;VMwareVMware&quot;, VMWARE},	{&quot;XenVMMXenVMM&quot;, V_XEN},   {&quot;ACRNACRNACRN&quot;, V_OTHER}, {&quot;VBoxVBoxVBox&quot;, VIRTUALBOX}}</code></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="class">
+<dt id="_CPPv4N7license2os7CpuInfoE">
+<span id="_CPPv3N7license2os7CpuInfoE"></span><span id="_CPPv2N7license2os7CpuInfoE"></span><span id="license::os::CpuInfo"></span><span class="target" id="classlicense_1_1os_1_1CpuInfo"></span><em class="property">class </em><code class="sig-name descname">CpuInfo</code><a class="headerlink" href="#_CPPv4N7license2os7CpuInfoE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;cpu_info.hpp&gt;</em><p>Cpu informations </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4NK7license2os7CpuInfo11cpu_virtualEv">
+<span id="_CPPv3NK7license2os7CpuInfo11cpu_virtualEv"></span><span id="_CPPv2NK7license2os7CpuInfo11cpu_virtualEv"></span><span id="license::os::CpuInfo::cpu_virtualC"></span><span class="target" id="classlicense_1_1os_1_1CpuInfo_1a94d815852cd2b2c7d69ef7fd24a5d562"></span>bool <code class="sig-name descname">cpu_virtual</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK7license2os7CpuInfo11cpu_virtualEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Detect Virtual machine using hypervisor bit or the cpu vendor name. <p>Detect Virtual machine using hypervisor bit. </p>
+<dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>true if the cpu is detected to be a virtual cpu</p>
+</dd>
+<dt><strong>Return</strong></dt><dd><p>true if the cpu hypervisor bit is set to 1 </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../analysis/Backoffice.html" class="btn btn-neutral float-right" title="Backoffice (Draft) (Use Cases)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../usage/issue-licenses.html" class="btn btn-neutral float-left" title="Issue licenses" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Open License Manager
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
